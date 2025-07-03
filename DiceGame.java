@@ -1,29 +1,22 @@
 import java.util.Random;
 import java.util.Scanner;
 
-public class DiceGame{
+public class DiceGame2{
     public static void main(String[] args){
-        Scanner scanner=new Scanner(System.in);
-        //waaaaaaaaaaaaa
-        System.out.println("What is your name? ");
-        System.out.print("> ");
-        String name=scanner.nextLine();
-        System.out.println("Hello, " + name + "!");
-
         int totalValue=rollDice();
-
         if(totalValue>7){
-            System.out.println(name + " won!");
+            System.out.println("You won!");
         }else{
-            System.out.println(name +" lost.");
+            System.out.println("You lost.");
         }
+        Scanner scanner=new Scanner(System.in);
         scanner.close();
+    
     }
 
     public static int rollDice(){
         Random random=new Random();
         System.out.println("Rolling dice...");
-        //rannsuu wo uhtatuseisei
         int d1=random.nextInt(6)+1;
         int d2=random.nextInt(6)+1;
         int total=d1+d2;
