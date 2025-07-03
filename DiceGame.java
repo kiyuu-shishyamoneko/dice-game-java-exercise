@@ -4,6 +4,13 @@ public class DiceGame {
 
     public static void main(String[] args) {
         int totalValue = rollDice();
+        if(totalValue>7){
+            System.out.println("You won!");
+        }else{
+            System.out.println("You lost.");
+        }
+        Scanner scanner=new Scanner(System.in);
+        scanner.close();
     }
     public static int rollDice() {
         Random random = new Random();
